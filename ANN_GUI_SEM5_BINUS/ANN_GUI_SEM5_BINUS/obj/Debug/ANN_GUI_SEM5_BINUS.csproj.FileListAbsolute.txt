@@ -7,3 +7,13 @@ d:\michael gunawan\documents\visual studio 2015\Projects\ANN_GUI_SEM5_BINUS\ANN_
 d:\michael gunawan\documents\visual studio 2015\Projects\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.exe
 d:\michael gunawan\documents\visual studio 2015\Projects\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.pdb
 d:\michael gunawan\documents\visual studio 2015\Projects\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.Form1.resources
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\ANN_GUI_SEM5_BINUS.exe.config
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.exe
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.pdb
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.csprojResolveAssemblyReference.cache
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.Form1.resources
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.Properties.Resources.resources
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.csproj.GenerateResource.Cache
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\libtensorflow.dll
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\ANN_GUI_SEM5_BINUS.exe
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\ANN_GUI_SEM5_BINUS.pdb

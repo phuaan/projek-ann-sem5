@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace ANN_GUI_SEM5_BINUS
 {
     public partial class Form1 : Form
@@ -31,5 +30,6 @@ namespace ANN_GUI_SEM5_BINUS
         {
 
         }
+        
     }
 }
