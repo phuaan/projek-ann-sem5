@@ -17,3 +17,14 @@ D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI
 D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\libtensorflow.dll
 D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\ANN_GUI_SEM5_BINUS.exe
 D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\ANN_GUI_SEM5_BINUS.pdb
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.dll.config
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.dll
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Math.Core.dll
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Math.dll
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Neuro.dll
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Statistics.dll
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.xml
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Math.xml
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Math.Core.xml
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Neuro.xml
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Statistics.xml

@@ -11,9 +11,11 @@ namespace ANN_GUI_SEM5_BINUS
 {
     public partial class Form1 : Form
     {
+        OpenFileDialog openfile = new OpenFileDialog();
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -30,6 +32,13 @@ namespace ANN_GUI_SEM5_BINUS
         {
 
         }
-        
+
+        private void btn_browseimages_Click(object sender, EventArgs e)
+        {
+            if (openfile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                MessageBox.Show(openfile.FileName);
+            }
+        }
     }
 }

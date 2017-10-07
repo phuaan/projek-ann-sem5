@@ -92,6 +92,7 @@
             this.btn_browseimages.TabIndex = 0;
             this.btn_browseimages.Text = "Browse Images";
             this.btn_browseimages.UseVisualStyleBackColor = true;
+            this.btn_browseimages.Click += new System.EventHandler(this.btn_browseimages_Click);
             // 
             // open
             // 
