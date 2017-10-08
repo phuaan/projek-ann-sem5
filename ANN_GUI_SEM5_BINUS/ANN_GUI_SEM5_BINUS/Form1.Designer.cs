@@ -41,7 +41,7 @@
             this.listView_selectedimage = new System.Windows.Forms.ListView();
             this.lbl_itemtype = new System.Windows.Forms.Label();
             this.lbl_selectedimage = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_type = new System.Windows.Forms.ComboBox();
             this.imagelist_selected = new System.Windows.Forms.ImageList(this.components);
             this.imageList_uploaded = new System.Windows.Forms.ImageList(this.components);
             this.grpbox_action.SuspendLayout();
@@ -77,6 +77,7 @@
             this.btn_upload.TabIndex = 2;
             this.btn_upload.Text = "Upload";
             this.btn_upload.UseVisualStyleBackColor = true;
+            this.btn_upload.Click += new System.EventHandler(this.btn_upload_Click);
             // 
             // btn_removeimages
             // 
@@ -86,6 +87,7 @@
             this.btn_removeimages.TabIndex = 1;
             this.btn_removeimages.Text = "Remove Images";
             this.btn_removeimages.UseVisualStyleBackColor = true;
+            this.btn_removeimages.Click += new System.EventHandler(this.btn_removeimages_Click);
             // 
             // btn_browseimages
             // 
@@ -163,20 +165,20 @@
             this.lbl_selectedimage.TabIndex = 6;
             this.lbl_selectedimage.Text = "Selected Image:";
             // 
-            // comboBox1
+            // cb_type
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cb_type.FormattingEnabled = true;
+            this.cb_type.Items.AddRange(new object[] {
             "Stationary",
             "Artisan Tool",
             "Cutlery",
             "Cooking Ware"});
-            this.comboBox1.Location = new System.Drawing.Point(366, 280);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(422, 24);
-            this.comboBox1.TabIndex = 7;
-            this.comboBox1.Text = "--choose--";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cb_type.Location = new System.Drawing.Point(366, 280);
+            this.cb_type.Name = "cb_type";
+            this.cb_type.Size = new System.Drawing.Size(422, 24);
+            this.cb_type.TabIndex = 7;
+            this.cb_type.Text = "--choose--";
+            this.cb_type.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // imagelist_selected
             // 
@@ -196,7 +198,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 485);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cb_type);
             this.Controls.Add(this.lbl_selectedimage);
             this.Controls.Add(this.lbl_itemtype);
             this.Controls.Add(this.listView_selectedimage);
@@ -223,7 +225,7 @@
         private System.Windows.Forms.ListView listView_selectedimage;
         private System.Windows.Forms.Label lbl_itemtype;
         private System.Windows.Forms.Label lbl_selectedimage;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_type;
         private System.Windows.Forms.Button btn_upload;
         private System.Windows.Forms.Button btn_removeimages;
         private System.Windows.Forms.Button btn_browseimages;
