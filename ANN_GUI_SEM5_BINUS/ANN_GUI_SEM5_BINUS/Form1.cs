@@ -50,10 +50,9 @@ namespace ANN_GUI_SEM5_BINUS
                     try
                     {
                         this.imagelist_selected.Images.Add(Image.FromFile(filename));
-                        //harus ada list buat capture filename
                         filelist.Add(filename);
                     }
-                    catch(Exception)
+                    catch
                     {
                         MessageBox.Show("File type must be “jpg”, “jpeg”, or “png”");
                     }
