@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbl_uploaded = new System.Windows.Forms.Label();
             this.grpbox_action = new System.Windows.Forms.GroupBox();
             this.btn_upload = new System.Windows.Forms.Button();
@@ -41,6 +42,8 @@
             this.lbl_itemtype = new System.Windows.Forms.Label();
             this.lbl_selectedimage = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.imagelist_selected = new System.Windows.Forms.ImageList(this.components);
+            this.imageList_uploaded = new System.Windows.Forms.ImageList(this.components);
             this.grpbox_action.SuspendLayout();
             this.open.SuspendLayout();
             this.SuspendLayout();
@@ -134,8 +137,10 @@
             // 
             // listView_selectedimage
             // 
+            this.listView_selectedimage.Alignment = System.Windows.Forms.ListViewAlignment.Left;
             this.listView_selectedimage.Location = new System.Drawing.Point(15, 311);
             this.listView_selectedimage.Name = "listView_selectedimage";
+            this.listView_selectedimage.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listView_selectedimage.Size = new System.Drawing.Size(326, 162);
             this.listView_selectedimage.TabIndex = 4;
             this.listView_selectedimage.UseCompatibleStateImageBehavior = false;
@@ -172,6 +177,18 @@
             this.comboBox1.TabIndex = 7;
             this.comboBox1.Text = "--choose--";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // imagelist_selected
+            // 
+            this.imagelist_selected.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imagelist_selected.ImageSize = new System.Drawing.Size(16, 16);
+            this.imagelist_selected.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // imageList_uploaded
+            // 
+            this.imageList_uploaded.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList_uploaded.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList_uploaded.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // Form1
             // 
@@ -212,6 +229,8 @@
         private System.Windows.Forms.Button btn_browseimages;
         private System.Windows.Forms.Button btn_searchsimilar;
         private System.Windows.Forms.Button btn_classifyitems;
+        private System.Windows.Forms.ImageList imagelist_selected;
+        private System.Windows.Forms.ImageList imageList_uploaded;
     }
 }
 
