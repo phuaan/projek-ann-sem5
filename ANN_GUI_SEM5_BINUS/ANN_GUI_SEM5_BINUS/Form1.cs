@@ -43,6 +43,7 @@ namespace ANN_GUI_SEM5_BINUS
         {
             filelist.Clear();
             openfile.Multiselect = true;
+            openfile.Filter = "Img files(*.jpg,*.jpeg,*.png)|*.jpg;*.jpeg;*.png;";
             if (openfile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 foreach(string filename in openfile.FileNames)
@@ -84,7 +85,6 @@ namespace ANN_GUI_SEM5_BINUS
             {
                 MessageBox.Show("please choose item type first");
                 ////////////////////////belum bisa categoriin
-                ////////////////////////baru bisa pindahin image dari bawah keatas
             }
             else
             {
