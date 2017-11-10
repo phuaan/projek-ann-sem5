@@ -28,3 +28,20 @@ D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI
 D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Math.Core.xml
 D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Neuro.xml
 D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Statistics.xml
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\ANN_GUI_SEM5_BINUS.exe.config
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.exe
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.pdb
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\libtensorflow.dll
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.dll.config
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\ANN_GUI_SEM5_BINUS.exe
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\ANN_GUI_SEM5_BINUS.pdb
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.dll
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Neuro.dll
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.xml
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Neuro.xml
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.csprojResolveAssemblyReference.cache
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.Form1.resources
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.Properties.Resources.resources
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.csproj.GenerateResource.Cache
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Imaging.dll
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Imaging.xml
