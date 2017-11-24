@@ -19,6 +19,11 @@ namespace ANN_GUI_SEM5_BINUS
         private Bitmap modifiedImage;
         private List<KeyValuePair<Image, string>> fileCat;
         private List<KeyValuePair<int, string>> fileGroup;
+        ///variabel buat kohonen som
+        private List<KeyValuePair<Bitmap, string>> dbtrainingdata = new List<KeyValuePair<Bitmap, string>>();
+        List<string> dbimageclass = new List<string>();
+        som_form som_form1;
+        ///end variabel buat kohonen som
 
         public Form1()
         {
@@ -34,7 +39,7 @@ namespace ANN_GUI_SEM5_BINUS
 
         private Bitmap makeGreyScale(Bitmap image)
         {
-            return Grayscale.CommonAlgorithms.BT709.Apply(image);
+            return Grayscale.CommonAlgorithms.RMY.Apply(image);
         }
 
         private Bitmap threshold(Bitmap img, int thresholdVal)
@@ -158,6 +163,8 @@ namespace ANN_GUI_SEM5_BINUS
             filelist.Clear();
             listView_selectedimage.Clear();
             imagelist_selected.Dispose();
+            dbtrainingdata.Clear();
+            dbimageclass.Clear();
         }
 
         private void btn_upload_Click(object sender, EventArgs e)
@@ -231,9 +238,38 @@ namespace ANN_GUI_SEM5_BINUS
                     //Next Image in the next iteration
                     item.ImageIndex = i;
                 }
+                ///kode buat db kohone
+                foreach (var loadedimage in filelist)
+                {
+                    var bitmap = new Bitmap(loadedimage);
+                    dbtrainingdata.Add(new KeyValuePair<Bitmap, string>(bitmap, loadedimage));
+                    dbimageclass.Add(cb_type.SelectedItem.ToString());
+                }
+                ///end kode buat db kohonen
                 filelist.Clear();
                 listView_selectedimage.Clear();
                 imagelist_selected.Dispose();
+            }
+        }
+
+        private void btn_searchsimilar_Click(object sender, EventArgs e)
+        {
+            if (dbtrainingdata.Count < 1)
+            {
+                MessageBox.Show("Upload some image first");
+            }
+            else {
+                if (som_form1 == null)
+                {
+                    som_form1 = new som_form(dbtrainingdata, dbimageclass);
+                    som_form1.Show();
+                }
+                else
+                {
+                    som_form1.Dispose();
+                    som_form1 = new som_form(dbtrainingdata, dbimageclass);
+                    som_form1.Show();
+                }
             }
         }
     }

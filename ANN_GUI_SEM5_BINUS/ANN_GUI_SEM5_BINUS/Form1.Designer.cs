@@ -118,6 +118,7 @@
             this.btn_searchsimilar.TabIndex = 1;
             this.btn_searchsimilar.Text = "Search Similar Images";
             this.btn_searchsimilar.UseVisualStyleBackColor = true;
+            this.btn_searchsimilar.Click += new System.EventHandler(this.btn_searchsimilar_Click);
             // 
             // btn_classifyitems
             // 
