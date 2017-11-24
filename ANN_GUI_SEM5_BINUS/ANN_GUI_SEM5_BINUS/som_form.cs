@@ -32,36 +32,7 @@ namespace ANN_GUI_SEM5_BINUS
             this.imageList1.ImageSize = new Size(80, 80);
             listView1.LargeImageList = imageList1;
         }
-        public Bitmap preprocess(Bitmap item)
-        {
-            var image = (Bitmap)item.Clone();
-            image = Grayscale.CommonAlgorithms.RMY.Apply(image);
-            image = new Threshold(127).Apply(image);
-            image = new HomogenityEdgeDetector().Apply(image);
-            //remove noise
-            var leftBoundary = image.Width;
-            var rightBoundary = 0;
-            var upperBoundary = image.Height;
-            var lowerBoundary = 0;
-            for (int i = 0; i < image.Height; i++)
-            {
-                for (int j = 0; j < image.Width; j++)
-                {
-                    //RGB sama aja kalo greyscale
-                    if (image.GetPixel(j, i).R > 210) //== 255
-                    {
-                        leftBoundary = Math.Min(leftBoundary, j);
-                        rightBoundary = Math.Max(rightBoundary, j);
-                        upperBoundary = Math.Min(upperBoundary, i);
-                        lowerBoundary = Math.Max(lowerBoundary, i);
-                    }
-                }
-            }
-            image = image.Clone(new Rectangle(leftBoundary, upperBoundary, rightBoundary - leftBoundary, lowerBoundary - upperBoundary), System.Drawing.Imaging.PixelFormat.Format24bppRgb);
-            //remove noise done
-            image = new ResizeBilinear(10, 10).Apply(image);
-            return image;
-        }
+        
         PrincipalComponentAnalysis pca;
         DistanceNetwork dn;
         SOMLearning som;
@@ -85,7 +56,7 @@ namespace ANN_GUI_SEM5_BINUS
                 ImageToArray imagetoarray = new ImageToArray();
                 for (int i = 0; i < dbtrainingdata.Count; i++)
                 {
-                    var image = preprocess(dbtrainingdata[i].Key);
+                    var image = Form1.preprocess(dbtrainingdata[i].Key);
                     double[] output;
                     imagetoarray.Convert(image, out output);
                     trainingData[i] = output;
@@ -111,7 +82,7 @@ namespace ANN_GUI_SEM5_BINUS
                 //mulai predict data
                 //predict input
                 Bitmap targetimage = new Bitmap(imagetopredict);
-                targetimage = preprocess(targetimage);
+                targetimage = Form1.preprocess(targetimage);
                 double[] targetoutput;
                 imagetoarray.Convert(targetimage, out targetoutput);
                 targetoutput = pca.Transform(targetoutput);
@@ -121,7 +92,7 @@ namespace ANN_GUI_SEM5_BINUS
                 foreach (var item in dbtrainingdata)
                 {
                     Bitmap tempimage = new Bitmap(item.Key);
-                    tempimage = preprocess(tempimage);
+                    tempimage = Form1.preprocess(tempimage);
                     double[] outputimg;
                     imagetoarray.Convert(tempimage, out outputimg);
                     outputimg = pca.Transform(outputimg);

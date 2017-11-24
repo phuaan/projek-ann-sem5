@@ -15,8 +15,6 @@ namespace ANN_GUI_SEM5_BINUS
     {
         OpenFileDialog openfile = new OpenFileDialog();
         public List<String> filelist = new List<string>();
-        private Bitmap originalImage;
-        private Bitmap modifiedImage;
         private List<KeyValuePair<Image, string>> fileCat;
         private List<KeyValuePair<int, string>> fileGroup;
         ///variabel buat kohonen som
@@ -37,36 +35,38 @@ namespace ANN_GUI_SEM5_BINUS
             fileGroup = new List<KeyValuePair<int, string>>();
         }
 
-        private Bitmap makeGreyScale(Bitmap image)
+        private static Bitmap makeGreyScale(Bitmap image)
         {
             return Grayscale.CommonAlgorithms.RMY.Apply(image);
         }
 
-        private Bitmap threshold(Bitmap img, int thresholdVal)
+        private static Bitmap threshold(Bitmap img, int thresholdVal)
         {
             return new Threshold(thresholdVal).Apply(img);
         }
 
-        private Bitmap EdgeDetection(Bitmap image)
+        private static Bitmap EdgeDetection(Bitmap image)
         {
             return new HomogenityEdgeDetector().Apply(image);
         }
 
-        private Bitmap doResize(Bitmap img, int width, int height)
+        private static Bitmap doResize(Bitmap img, int width, int height)
         {
             return new ResizeBilinear(width, height).Apply(img);
         }
 
-        private void procesImage ()
+        public static Bitmap preprocess (Bitmap item)
         {
-            modifiedImage = makeGreyScale(originalImage);
-            modifiedImage = threshold(modifiedImage, 127);
-            modifiedImage = EdgeDetection(modifiedImage);
-            modifiedImage = doCrop(modifiedImage);
-            modifiedImage = doResize(modifiedImage, 10, 10);
+            Bitmap image = (Bitmap)item.Clone();
+            image  = makeGreyScale(image);
+            image = threshold(image, 127);
+            image = EdgeDetection(image);
+            image = doCrop(image);
+            image = doResize(image, 10, 10);
+            return image;
         }
 
-        private Bitmap doCrop(Bitmap img)
+        private static Bitmap doCrop(Bitmap img)
         {
             var leftBoundary = img.Width;
             var rightBoundary = 0;
