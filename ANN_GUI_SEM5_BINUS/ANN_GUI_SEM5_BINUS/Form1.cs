@@ -159,12 +159,37 @@ namespace ANN_GUI_SEM5_BINUS
                 MessageBox.Show("Please select an Item First");
                 return;
             }
-
-            filelist.Clear();
-            listView_selectedimage.Clear();
-            imagelist_selected.Dispose();
-            dbtrainingdata.Clear();
-            dbimageclass.Clear();
+            foreach (ListViewItem itemtoremove in listView_selectedimage.SelectedItems)
+            {
+                int remove = listView_selectedimage.Items.IndexOf(itemtoremove);
+                if (remove != -1)
+                {
+                    listView_selectedimage.Items.RemoveAt(remove);
+                    filelist.RemoveAt(remove);
+                    imagelist_selected.Images.RemoveAt(remove);
+                }
+                listView_selectedimage.Items.Remove(itemtoremove);
+            }
+            //var selecteditems = listView_selectedimage.SelectedItems;
+            //int iterate = listView_selectedimage.SelectedItems.Count;
+            //for (int i = 0; i < iterate; i++)
+            //{
+            //    int remove = listView_selectedimage.Items.IndexOfKey(selecteditems[i].);
+            //    if (remove!=-1)
+            //    {
+            //        listView_selectedimage.Items.RemoveAt(remove);
+            //        filelist.RemoveAt(remove);
+            //        imagelist_selected.Images.RemoveAt(remove);
+            //        dbtrainingdata.RemoveAt(remove);
+            //        dbimageclass.RemoveAt(remove);
+            //    }
+            //}
+            //listView_selectedimage.Items.RemoveAt
+            //filelist.Remove(item.ToString());
+            //listView_selectedimage.SelectedItems.Clear();
+            //imagelist_selected.Images.RemoveByKey(item.ToString());
+            //dbtrainingdata.re
+            //dbimageclass.Clear();
         }
 
         private void btn_upload_Click(object sender, EventArgs e)
