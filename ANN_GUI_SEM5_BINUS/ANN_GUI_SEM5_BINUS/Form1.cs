@@ -57,10 +57,10 @@ namespace ANN_GUI_SEM5_BINUS
 
         public static Bitmap preprocess (Bitmap item)
         {
-            Bitmap image = (Bitmap)item.Clone();
+            Bitmap image = item.Clone(new Rectangle(0, 0, item.Width, item.Height),System.Drawing.Imaging.PixelFormat.Format24bppRgb);
             image  = makeGreyScale(image);
             image = threshold(image, 127);
-            image = EdgeDetection(image);
+            //image = EdgeDetection(image); //di soal ga diminta, kt william gaush
             image = doCrop(image);
             image = doResize(image, 10, 10);
             return image;
@@ -78,7 +78,7 @@ namespace ANN_GUI_SEM5_BINUS
                 for (int j = 0; j < img.Width; j++)
                 {
                     //RGB sama aja kalo greyscale
-                    if (img.GetPixel(j, i).R > 210) //== 255
+                    if (img.GetPixel(j, i).R < 127) //== 255
                     {
                         leftBoundary = Math.Min(leftBoundary, j);
                         rightBoundary = Math.Max(rightBoundary, j);
