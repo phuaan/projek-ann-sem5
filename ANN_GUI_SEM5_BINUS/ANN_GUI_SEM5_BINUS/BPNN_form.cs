@@ -87,8 +87,7 @@ namespace ANN_GUI_SEM5_BINUS
 
         private Bitmap preprocess(Bitmap image)
         {
-            Bitmap preprocessed = (Bitmap)image.Clone();
-
+            Bitmap preprocessed = image.Clone(new Rectangle(0, 0, image.Width, image.Height), System.Drawing.Imaging.PixelFormat.Format24bppRgb);
             preprocessed = Grayscale.CommonAlgorithms.BT709.Apply(preprocessed);
             preprocessed = new Threshold(127).Apply(preprocessed);
             preprocessed = new HomogenityEdgeDetector().Apply(preprocessed);

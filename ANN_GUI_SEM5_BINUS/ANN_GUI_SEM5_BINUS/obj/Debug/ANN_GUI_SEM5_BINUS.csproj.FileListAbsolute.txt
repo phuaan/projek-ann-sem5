@@ -56,3 +56,4 @@ E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\
 E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Statistics.xml
 E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.som_form.resources
 E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.bpnn_form.resources
+D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.bpnn_form.resources

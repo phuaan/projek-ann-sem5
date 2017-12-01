@@ -62,7 +62,7 @@ namespace ANN_GUI_SEM5_BINUS
             Bitmap image = item.Clone(new Rectangle(0, 0, item.Width, item.Height),System.Drawing.Imaging.PixelFormat.Format24bppRgb);
             image  = makeGreyScale(image);
             image = threshold(image, 127);
-            //image = EdgeDetection(image); //di soal ga diminta, kt william gaush
+            image = EdgeDetection(image);
             image = doCrop(image);
             image = doResize(image, 10, 10);
             return image;
