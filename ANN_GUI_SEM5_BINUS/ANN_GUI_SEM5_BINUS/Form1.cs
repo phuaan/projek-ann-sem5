@@ -22,6 +22,8 @@ namespace ANN_GUI_SEM5_BINUS
         List<string> dbimageclass = new List<string>();
         som_form som_form1;
         ///end variabel buat kohonen som
+        bpnn_form bpn_form;
+
 
         public Form1()
         {
@@ -124,7 +126,8 @@ namespace ANN_GUI_SEM5_BINUS
 
         private void btn_browseimages_Click(object sender, EventArgs e)
         {
-            filelist.Clear();
+            //filelist.Clear();
+            listView_selectedimage.Clear();
             openfile.Multiselect = true;
             openfile.Filter = "Img files(*.jpg,*.jpeg,*.png)|*.jpg;*.jpeg;*.png;";
             if (openfile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -162,6 +165,7 @@ namespace ANN_GUI_SEM5_BINUS
             foreach (ListViewItem itemtoremove in listView_selectedimage.SelectedItems)
             {
                 int remove = listView_selectedimage.Items.IndexOf(itemtoremove);
+                Console.WriteLine(remove);
                 if (remove != -1)
                 {
                     listView_selectedimage.Items.RemoveAt(remove);
@@ -229,11 +233,7 @@ namespace ANN_GUI_SEM5_BINUS
                 foreach (var singleGroup in fileGroup)
                 {
                     this.listView_uploaded.Groups.Add(new ListViewGroup(singleGroup.Value, HorizontalAlignment.Left));
-                    Console.WriteLine($"Image :{ singleGroup }");
                 }
-
-                Console.WriteLine("END2");
-                Console.WriteLine(this.listView_uploaded.Groups.Count);
 
                 for (int i = 0; i < this.imageList_uploaded.Images.Count; i++)
                 {
@@ -246,7 +246,6 @@ namespace ANN_GUI_SEM5_BINUS
                         if (existedGroup.Header == this.fileCat.ElementAt(i).Value)
                         {
                             // Add to previous group if group existed
-                            Console.WriteLine($"{existedGroup.Header}");
                             this.listView_uploaded.Items.Add(item).Group = existedGroup;
                             group_exists = true;
                         }
@@ -271,6 +270,7 @@ namespace ANN_GUI_SEM5_BINUS
                     dbimageclass.Add(cb_type.SelectedItem.ToString());
                 }
                 ///end kode buat db kohonen
+
                 filelist.Clear();
                 listView_selectedimage.Clear();
                 imagelist_selected.Dispose();
@@ -294,6 +294,27 @@ namespace ANN_GUI_SEM5_BINUS
                     som_form1.Dispose();
                     som_form1 = new som_form(dbtrainingdata, dbimageclass);
                     som_form1.Show();
+                }
+            }
+        }
+
+        private void btn_classifyitems_Click(object sender, EventArgs e)
+        {
+            if (dbtrainingdata.Count < 1)
+            {
+                MessageBox.Show("Upload some image first");
+            }
+            else {
+                if (bpn_form == null)
+                {
+                    bpn_form = new bpnn_form(fileCat, fileGroup);
+                    bpn_form.Show();
+                }
+                else
+                {
+                    bpn_form.Dispose();
+                    bpn_form = new bpnn_form(fileCat, fileGroup);
+                    bpn_form.Show();
                 }
             }
         }

@@ -48,3 +48,11 @@ D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI
 D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Math.xml
 D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Math.Core.xml
 D:\Michael Gunawan\Documents\Visual Studio 2015\Projects\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Statistics.xml
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Math.Core.dll
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Math.dll
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Statistics.dll
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Math.xml
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Math.Core.xml
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\bin\Debug\Accord.Statistics.xml
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.som_form.resources
+E:\Developments\projek-ann-sem5\ANN_GUI_SEM5_BINUS\ANN_GUI_SEM5_BINUS\obj\Debug\ANN_GUI_SEM5_BINUS.bpnn_form.resources

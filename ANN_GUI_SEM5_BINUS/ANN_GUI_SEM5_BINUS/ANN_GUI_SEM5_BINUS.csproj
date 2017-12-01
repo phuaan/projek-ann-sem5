@@ -72,6 +72,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BPNN_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BPNN_form.Designer.cs">
+      <DependentUpon>BPNN_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     <Compile Include="som_form.Designer.cs">
       <DependentUpon>som_form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BPNN_form.resx">
+      <DependentUpon>BPNN_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

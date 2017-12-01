@@ -51,9 +51,10 @@
             // lbl_uploaded
             // 
             this.lbl_uploaded.AutoSize = true;
-            this.lbl_uploaded.Location = new System.Drawing.Point(12, 9);
+            this.lbl_uploaded.Location = new System.Drawing.Point(9, 7);
+            this.lbl_uploaded.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_uploaded.Name = "lbl_uploaded";
-            this.lbl_uploaded.Size = new System.Drawing.Size(73, 17);
+            this.lbl_uploaded.Size = new System.Drawing.Size(56, 13);
             this.lbl_uploaded.TabIndex = 0;
             this.lbl_uploaded.Text = "Uploaded:";
             // 
@@ -62,18 +63,21 @@
             this.grpbox_action.Controls.Add(this.btn_upload);
             this.grpbox_action.Controls.Add(this.btn_removeimages);
             this.grpbox_action.Controls.Add(this.btn_browseimages);
-            this.grpbox_action.Location = new System.Drawing.Point(366, 311);
+            this.grpbox_action.Location = new System.Drawing.Point(274, 253);
+            this.grpbox_action.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpbox_action.Name = "grpbox_action";
-            this.grpbox_action.Size = new System.Drawing.Size(181, 162);
+            this.grpbox_action.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpbox_action.Size = new System.Drawing.Size(136, 132);
             this.grpbox_action.TabIndex = 1;
             this.grpbox_action.TabStop = false;
             this.grpbox_action.Text = "Action";
             // 
             // btn_upload
             // 
-            this.btn_upload.Location = new System.Drawing.Point(20, 108);
+            this.btn_upload.Location = new System.Drawing.Point(15, 88);
+            this.btn_upload.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_upload.Name = "btn_upload";
-            this.btn_upload.Size = new System.Drawing.Size(135, 23);
+            this.btn_upload.Size = new System.Drawing.Size(101, 19);
             this.btn_upload.TabIndex = 2;
             this.btn_upload.Text = "Upload";
             this.btn_upload.UseVisualStyleBackColor = true;
@@ -81,9 +85,10 @@
             // 
             // btn_removeimages
             // 
-            this.btn_removeimages.Location = new System.Drawing.Point(20, 73);
+            this.btn_removeimages.Location = new System.Drawing.Point(15, 59);
+            this.btn_removeimages.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_removeimages.Name = "btn_removeimages";
-            this.btn_removeimages.Size = new System.Drawing.Size(135, 23);
+            this.btn_removeimages.Size = new System.Drawing.Size(101, 19);
             this.btn_removeimages.TabIndex = 1;
             this.btn_removeimages.Text = "Remove Images";
             this.btn_removeimages.UseVisualStyleBackColor = true;
@@ -91,9 +96,10 @@
             // 
             // btn_browseimages
             // 
-            this.btn_browseimages.Location = new System.Drawing.Point(20, 38);
+            this.btn_browseimages.Location = new System.Drawing.Point(15, 31);
+            this.btn_browseimages.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_browseimages.Name = "btn_browseimages";
-            this.btn_browseimages.Size = new System.Drawing.Size(135, 23);
+            this.btn_browseimages.Size = new System.Drawing.Size(101, 19);
             this.btn_browseimages.TabIndex = 0;
             this.btn_browseimages.Text = "Browse Images";
             this.btn_browseimages.UseVisualStyleBackColor = true;
@@ -103,18 +109,21 @@
             // 
             this.open.Controls.Add(this.btn_searchsimilar);
             this.open.Controls.Add(this.btn_classifyitems);
-            this.open.Location = new System.Drawing.Point(563, 311);
+            this.open.Location = new System.Drawing.Point(422, 253);
+            this.open.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.open.Name = "open";
-            this.open.Size = new System.Drawing.Size(225, 162);
+            this.open.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.open.Size = new System.Drawing.Size(169, 132);
             this.open.TabIndex = 2;
             this.open.TabStop = false;
             this.open.Text = "Open";
             // 
             // btn_searchsimilar
             // 
-            this.btn_searchsimilar.Location = new System.Drawing.Point(22, 88);
+            this.btn_searchsimilar.Location = new System.Drawing.Point(16, 72);
+            this.btn_searchsimilar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_searchsimilar.Name = "btn_searchsimilar";
-            this.btn_searchsimilar.Size = new System.Drawing.Size(177, 23);
+            this.btn_searchsimilar.Size = new System.Drawing.Size(133, 19);
             this.btn_searchsimilar.TabIndex = 1;
             this.btn_searchsimilar.Text = "Search Similar Images";
             this.btn_searchsimilar.UseVisualStyleBackColor = true;
@@ -122,18 +131,21 @@
             // 
             // btn_classifyitems
             // 
-            this.btn_classifyitems.Location = new System.Drawing.Point(22, 58);
+            this.btn_classifyitems.Location = new System.Drawing.Point(16, 47);
+            this.btn_classifyitems.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_classifyitems.Name = "btn_classifyitems";
-            this.btn_classifyitems.Size = new System.Drawing.Size(177, 23);
+            this.btn_classifyitems.Size = new System.Drawing.Size(133, 19);
             this.btn_classifyitems.TabIndex = 0;
             this.btn_classifyitems.Text = "Classify Items";
             this.btn_classifyitems.UseVisualStyleBackColor = true;
+            this.btn_classifyitems.Click += new System.EventHandler(this.btn_classifyitems_Click);
             // 
             // listView_uploaded
             // 
-            this.listView_uploaded.Location = new System.Drawing.Point(15, 29);
+            this.listView_uploaded.Location = new System.Drawing.Point(11, 24);
+            this.listView_uploaded.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listView_uploaded.Name = "listView_uploaded";
-            this.listView_uploaded.Size = new System.Drawing.Size(773, 216);
+            this.listView_uploaded.Size = new System.Drawing.Size(581, 176);
             this.listView_uploaded.TabIndex = 3;
             this.listView_uploaded.UseCompatibleStateImageBehavior = false;
             this.listView_uploaded.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
@@ -141,28 +153,31 @@
             // listView_selectedimage
             // 
             this.listView_selectedimage.Alignment = System.Windows.Forms.ListViewAlignment.Left;
-            this.listView_selectedimage.Location = new System.Drawing.Point(15, 311);
+            this.listView_selectedimage.Location = new System.Drawing.Point(11, 253);
+            this.listView_selectedimage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listView_selectedimage.Name = "listView_selectedimage";
             this.listView_selectedimage.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.listView_selectedimage.Size = new System.Drawing.Size(326, 162);
+            this.listView_selectedimage.Size = new System.Drawing.Size(246, 132);
             this.listView_selectedimage.TabIndex = 4;
             this.listView_selectedimage.UseCompatibleStateImageBehavior = false;
             // 
             // lbl_itemtype
             // 
             this.lbl_itemtype.AutoSize = true;
-            this.lbl_itemtype.Location = new System.Drawing.Point(366, 252);
+            this.lbl_itemtype.Location = new System.Drawing.Point(274, 205);
+            this.lbl_itemtype.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_itemtype.Name = "lbl_itemtype";
-            this.lbl_itemtype.Size = new System.Drawing.Size(74, 17);
+            this.lbl_itemtype.Size = new System.Drawing.Size(57, 13);
             this.lbl_itemtype.TabIndex = 5;
             this.lbl_itemtype.Text = "Item Type:";
             // 
             // lbl_selectedimage
             // 
             this.lbl_selectedimage.AutoSize = true;
-            this.lbl_selectedimage.Location = new System.Drawing.Point(12, 283);
+            this.lbl_selectedimage.Location = new System.Drawing.Point(9, 230);
+            this.lbl_selectedimage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_selectedimage.Name = "lbl_selectedimage";
-            this.lbl_selectedimage.Size = new System.Drawing.Size(109, 17);
+            this.lbl_selectedimage.Size = new System.Drawing.Size(84, 13);
             this.lbl_selectedimage.TabIndex = 6;
             this.lbl_selectedimage.Text = "Selected Image:";
             // 
@@ -174,9 +189,10 @@
             "Artisan Tool",
             "Cutlery",
             "Cooking Ware"});
-            this.cb_type.Location = new System.Drawing.Point(366, 280);
+            this.cb_type.Location = new System.Drawing.Point(274, 228);
+            this.cb_type.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cb_type.Name = "cb_type";
-            this.cb_type.Size = new System.Drawing.Size(422, 24);
+            this.cb_type.Size = new System.Drawing.Size(318, 21);
             this.cb_type.TabIndex = 7;
             this.cb_type.Text = "--choose--";
             this.cb_type.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -195,10 +211,10 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 485);
+            this.ClientSize = new System.Drawing.Size(600, 394);
             this.Controls.Add(this.cb_type);
             this.Controls.Add(this.lbl_selectedimage);
             this.Controls.Add(this.lbl_itemtype);
@@ -207,6 +223,7 @@
             this.Controls.Add(this.open);
             this.Controls.Add(this.grpbox_action);
             this.Controls.Add(this.lbl_uploaded);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "BlueStore";
             this.Load += new System.EventHandler(this.Form1_Load);
