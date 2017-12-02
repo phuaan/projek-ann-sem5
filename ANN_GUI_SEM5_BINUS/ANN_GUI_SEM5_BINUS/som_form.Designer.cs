@@ -93,6 +93,7 @@
             this.Controls.Add(this.label1);
             this.Name = "som_form";
             this.Text = "som_form";
+            this.Load += new System.EventHandler(this.som_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
