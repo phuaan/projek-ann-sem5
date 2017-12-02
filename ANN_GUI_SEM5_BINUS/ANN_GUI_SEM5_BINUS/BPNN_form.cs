@@ -20,13 +20,11 @@ namespace ANN_GUI_SEM5_BINUS
         ActivationNetwork an = null;
         BackPropagationLearning bpl = null;
 
-        int MAX_EPOCH;
+        int MAX_EPOCH = 1000000;
         double desiredError = 0.000001;
 
         List<KeyValuePair<Image, string>> dbtrainingdata;
         List<KeyValuePair<int, string>> dbimageclass;
-
-        Bitmap toBePredicted;
         string path = "bpn.bin";
 
         public bpnn_form(List<KeyValuePair<Image, string>> dbtrainingdata, List<KeyValuePair<int, string>> dbimageclass)
@@ -39,6 +37,13 @@ namespace ANN_GUI_SEM5_BINUS
             if (File.Exists(path))
             {
                 an = (ActivationNetwork)ActivationNetwork.Load(path);
+            }
+
+            foreach (KeyValuePair<Image, string> item in dbtrainingdata)
+            {
+                Console.Write(item.Key.ToString());
+                Console.Write(":");
+                Console.WriteLine(item.Value);
             }
         }
 
@@ -89,12 +94,19 @@ namespace ANN_GUI_SEM5_BINUS
         {
             Bitmap preprocessed = image.Clone(new Rectangle(0, 0, image.Width, image.Height), System.Drawing.Imaging.PixelFormat.Format24bppRgb);
             preprocessed = Grayscale.CommonAlgorithms.BT709.Apply(preprocessed);
-            preprocessed = new Threshold(127).Apply(preprocessed);
+            preprocessed = new Threshold(100).Apply(preprocessed);
             preprocessed = new HomogenityEdgeDetector().Apply(preprocessed);
             preprocessed = this.crop(preprocessed);
             preprocessed = new ResizeBilinear(10, 10).Apply(preprocessed);
 
             return preprocessed;
+        }
+
+        private int normalizeOutput(double[] output)
+        {
+            int prediction = (int)Math.Round(output[0]) * dbimageclass.Count;
+
+            return prediction;
         }
 
         private void trainBtn_Click(object sender, EventArgs e)
@@ -108,13 +120,13 @@ namespace ANN_GUI_SEM5_BINUS
             }
             else
             {
-                an = new ActivationNetwork(new SigmoidFunction(), 100, 3, 1);
+                an = new ActivationNetwork(new SigmoidFunction(), 100, dbimageclass.Count, 1);
                 bpl = new BackPropagationLearning(an);
             }
 
             List<double[]> input_data = new List<double[]> ();
             List<double[]> output_data = new List<double[]> ();
-            double error;
+            double error = 0;
 
             foreach (KeyValuePair<Image, string> image in dbtrainingdata) {
                 input_data.Add(normalize(preprocess((Bitmap)image.Key)));
@@ -135,9 +147,11 @@ namespace ANN_GUI_SEM5_BINUS
             for (int i = 0; i < MAX_EPOCH; i++)
             {
                 error = bpl.RunEpoch(input_training, output_training);
-                if (error < desiredError)
+                if (error <= desiredError)
                     break;
             }
+
+            Console.WriteLine(error);
 
             an.Save(path);
 
@@ -149,22 +163,26 @@ namespace ANN_GUI_SEM5_BINUS
         {
             var ofd = new OpenFileDialog();
             ofd.Filter = "Img files(*.jpg,*.jpeg,*.png)|*.jpg;*.jpeg;*.png;";
+            Bitmap toBePredicted = null;
 
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
-                    this.toBePredicted = (Bitmap)Image.FromFile(ofd.FileName);
-                    pictureBox1.Image = this.toBePredicted;
+                    toBePredicted = (Bitmap)Image.FromFile(ofd.FileName);
+                    pictureBox1.Image = toBePredicted;
                     
-                    double[] predicted = normalize(preprocess(this.toBePredicted));
+                    double[] predicted = normalize(preprocess(toBePredicted));
 
                     double[] res = an.Compute(predicted);
                     string prediction = "";
 
+                    Console.WriteLine(res[0]);
+                    Console.WriteLine(normalizeOutput(res));
+
                     foreach (KeyValuePair<int, string> item in dbimageclass)
                     {
-                        if (item.Key == (int)res[0])
+                        if ((item.Key+1) == normalizeOutput(res))
                             prediction = item.Value;
                     }
 
