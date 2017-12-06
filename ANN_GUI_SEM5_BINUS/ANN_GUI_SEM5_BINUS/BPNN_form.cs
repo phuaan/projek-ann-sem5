@@ -24,7 +24,14 @@ namespace ANN_GUI_SEM5_BINUS
         double desiredError = 0.000001;
 
         List<KeyValuePair<Image, string>> dbtrainingdata;
-        List<KeyValuePair<int, string>> dbimageclass;
+        List<KeyValuePair<int, string>> dbimageclass = new List<KeyValuePair<int,string>>(
+            new KeyValuePair<int,string>[] {
+                new KeyValuePair<int, string> (0, "Stationary"),
+                new KeyValuePair<int, string> (1, "Cutlery"),
+                new KeyValuePair<int, string> (2, "Artisan Tool"),
+                new KeyValuePair<int, string> (3, "Cooking Ware")
+            }
+        );
         string path = "bpn.bin";
 
         public bpnn_form(List<KeyValuePair<Image, string>> dbtrainingdata, List<KeyValuePair<int, string>> dbimageclass)
@@ -33,11 +40,6 @@ namespace ANN_GUI_SEM5_BINUS
 
             this.dbtrainingdata = dbtrainingdata;
             this.dbimageclass = dbimageclass;
-
-            if (File.Exists(path))
-            {
-                an = (ActivationNetwork)ActivationNetwork.Load(path);
-            }
 
             foreach (KeyValuePair<Image, string> item in dbtrainingdata)
             {
@@ -106,23 +108,40 @@ namespace ANN_GUI_SEM5_BINUS
         {
             int prediction = (int)Math.Round(output[0]) * dbimageclass.Count;
 
+            if (prediction == 0)
+                return 1;
+
             return prediction;
         }
 
         private void trainBtn_Click(object sender, EventArgs e)
         {
-            if (an != null && bpl != null)
+            if (File.Exists(path))
+            {
+                an = (ActivationNetwork)ActivationNetwork.Load(path);
+                
+                var confirmation = MessageBox.Show("Are you sure you want to retrain the classification network?", "Confirmation", MessageBoxButtons.YesNo);
+
+                if (confirmation == DialogResult.No)
+                {
+                    predictBtn.Enabled = true;
+                    return;
+                }
+            }
+            else if (an != null && bpl != null)
             {
                 var confirmation = MessageBox.Show("Are you sure you want to retrain the classification network?", "Confirmation", MessageBoxButtons.YesNo);
 
                 if (confirmation == DialogResult.No)
+                {
+                    predictBtn.Enabled = true;
                     return;
+                }
             }
-            else
-            {
-                an = new ActivationNetwork(new SigmoidFunction(), 100, dbimageclass.Count, 1);
-                bpl = new BackPropagationLearning(an);
-            }
+
+            an = new ActivationNetwork(new SigmoidFunction(), 100, dbimageclass.Count, 1);
+            bpl = new BackPropagationLearning(an);
+            
 
             List<double[]> input_data = new List<double[]> ();
             List<double[]> output_data = new List<double[]> ();
@@ -176,9 +195,6 @@ namespace ANN_GUI_SEM5_BINUS
 
                     double[] res = an.Compute(predicted);
                     string prediction = "";
-
-                    Console.WriteLine(res[0]);
-                    Console.WriteLine(normalizeOutput(res));
 
                     foreach (KeyValuePair<int, string> item in dbimageclass)
                     {
